@@ -7,17 +7,7 @@ ApplicationWindow{
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
-
-    color: dwm.compositionEnabled ? "transparent" : dwm.realColorizationColor
-    Win.DwmFeatures {
-        id: dwm
-        topGlassMargin: -1
-        leftGlassMargin: -1
-        rightGlassMargin: -1
-        bottomGlassMargin: -1
-    }
-
+    title: qsTr("Hello World")    
     //flags: Qt.FramelessWindowHint
 
     Rectangle {
@@ -26,12 +16,20 @@ ApplicationWindow{
         width: 100
         height: 100
         color:"lightblue"
+        Label {
+            text: "Click the button one time to get window colours, two times to set them green"
+            anchors.horizontalCenter: parent.horizontalCenter
+            y:120
+        }
+
 
         Button {
             anchors.fill: parent
-            text: "Click me"
-            //onClicked: myObject.getCurrentColor()
+            text: "button"
+            onClicked: myObject.getCurrentColor()
             onDoubleClicked:myObject.setCurrentWindowColor()
+
         }
+
     }
 }

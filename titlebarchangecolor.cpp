@@ -13,12 +13,6 @@ void TitleBarChangeColor::hello()
 
 void TitleBarChangeColor::setCurrentWindowColor()
 {
-
-    aOldColors[0] = RGB(0xc7, 0xc8, 0xca);
-    aOldColors[1] = RGB(0xc7, 0xc8, 0xca);
-    aOldColors[2] = RGB(0x00, 0x00, 0x00);
-
-
     aNewColors[0] = RGB(0x55, 0x99, 0x22);  // green
     aNewColors[1] = RGB(0x55, 0x99, 0x22);  // green
     aNewColors[2] = RGB(0x55, 0x99, 0x22);  // green
